@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker run \
+   --rm \
+   --volume "$PWD":/go/app \
+   --workdir /go/app \
+   golang:alpine ./build_helper

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+apk update
+apk add git
+export GOBIN=/go/app
+go version
+go get
+go build --ldflags '-extldflags "-static"' -x -v -o /go/app/okq
